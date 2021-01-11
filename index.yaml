@@ -3,6 +3,16 @@ entries:
   notejam:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-01-11T21:43:01.206314+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 367e591220e133bd6b7d9c7c07a86448e4d6aa1bce8c8249e33243790adfeb3b
+    name: notejam
+    type: application
+    urls:
+    - https://github.com/khoatdd/parcel-helm-charts/releases/download/notejam-0.1.2/notejam-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-01-11T21:26:01.5955+07:00"
     description: A Helm chart for Kubernetes
     digest: 4871ae69832247c0e2b9092408f062b3d9660cf2577123119b54519745cf6be7
