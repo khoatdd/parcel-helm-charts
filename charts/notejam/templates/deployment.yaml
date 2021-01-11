@@ -33,6 +33,21 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DB_HOST
+              value: postgresql
+            - name: DB_NAME
+              value: notejam
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: dbcreds
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dbcreds
+                  key: password
           ports:
             - name: http
               containerPort: 80
